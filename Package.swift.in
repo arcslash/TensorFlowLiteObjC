@@ -4,21 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "TensorFlowLiteSwift",
+    name: "TensorFlowLiteObjC",
     platforms: [.iOS(.v12)],
     products: [
         .library(
-            name: "TensorFlowLiteSwift",
+            name: "TensorFlowLiteObjC",
             targets: [
                 "TensorFlowLiteC",
                 "TensorFlowLiteCCoreML",
-                "TensorFlowLiteSwift"
+                "TensorFlowLiteObjC"
             ]
         )
     ],
     targets: [
         .target(
-            name: "TensorFlowLiteSwift",
+            name: "TensorFlowLiteObjC",
             linkerSettings: [.linkedLibrary("c++")]
         ),
         .binaryTarget(
